@@ -1,17 +1,12 @@
 package def;
 
-import java.awt.Image;
-import java.awt.geom.AffineTransform;
-import java.awt.image.AffineTransformOp;
-import java.awt.image.BufferedImage;
-import java.nio.Buffer;
 import java.util.Random;
 
 public class Game {
 	Random rand = new Random();
 	private double posX = 128;
 	private double posY = 256;
-	private double gravity = 0.009;
+	private double gravity = 0.008;
 	private double raggio = 50;
 	private double velY = 0.5;
 	private double pipeX = 700;

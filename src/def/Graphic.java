@@ -25,9 +25,6 @@ import javax.swing.Timer;
 
 public class Graphic extends JPanel implements ActionListener {
 
-	// Richiesto dall'IDE
-	private static final long serialVersionUID = 1L;
-
 	// Costruttore
 	public Graphic() {
 		loadImage();
@@ -54,22 +51,24 @@ public class Graphic extends JPanel implements ActionListener {
 		
 		// Buffer del Font Custom
 		try {
-			arcade = Font.createFont(Font.TRUETYPE_FONT, new File("ARCADEPI.TTF")).deriveFont(50f);
-			miniArcade = Font.createFont(Font.TRUETYPE_FONT, new File("ARCADEPI.TTF")).deriveFont(25f);
+			arcade = Font.createFont(Font.TRUETYPE_FONT, new File("font/ARCADEPI.TTF")).deriveFont(50f);
+			miniArcade = Font.createFont(Font.TRUETYPE_FONT, new File("font/ARCADEPI.TTF")).deriveFont(25f);
 			GraphicsEnvironment gE = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			gE.registerFont(arcade);
 		} catch (IOException | FontFormatException e) {
-			System.out.print("MISA CHE NON CI STA IL FONT E IL GIOCO NON CARICHERA' MAI");
+			System.err.print("An Error Occurred While Loading Font");
+			System.exit(-1);
 		}
 
 		// Buffer delle immagini
 		try {
-			flappy = ImageIO.read(new File("FlappyBird.png"));
-			bg = ImageIO.read(new File("Background.png"));
-			botPipe = ImageIO.read(new File("BotPipe.png"));
-			topPipe = ImageIO.read(new File("TopPipe.png"));
+			flappy = ImageIO.read(new File("sprites/FlappyBird.png"));
+			bg = ImageIO.read(new File("sprites/Background.png"));
+			botPipe = ImageIO.read(new File("sprites/BotPipe.png"));
+			topPipe = ImageIO.read(new File("sprites/TopPipe.png"));
 		} catch (IOException ex) {
-			System.out.print("MISA CHE NON CI SONO LE IMMAGINI E IL GIOCO NON CARICHERA' MAI");
+			System.err.print("An Error Occurred While Loading Images");
+			System.exit(-1);
 		}
 	}
 
