@@ -7,7 +7,7 @@ public class Game {
 	private double posX = 128;
 	private double posY = 256;
 	private double gravity = 0.008;
-	private double raggio = 50;
+	private double raggio = 47;
 	private double velY = 0.5;
 	private double pipeX = 700;
 	private double pipeY = rand.nextInt(500) + 500;

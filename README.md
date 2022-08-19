@@ -1,2 +1,4 @@
-# fake-flappy-bird
-Flappy Bird game made with Java as a school project
+# Flappy Bird
+Flappy Bird game made with Java
+
+![](flappy.png)
