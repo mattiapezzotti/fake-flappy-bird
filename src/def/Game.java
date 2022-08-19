@@ -6,12 +6,12 @@ public class Game {
 	Random rand = new Random();
 	private double posX = 128;
 	private double posY = 256;
-	private double gravity = 0.008;
-	private double raggio = 47;
+	private double gravity = 0.01;
+	private double raggio = 48;
 	private double velY = 0.5;
 	private double pipeX = 700;
 	private double pipeY = rand.nextInt(500) + 500;
-	private double velX = 1 ;
+	private double velX = 1.05 ;
 	private Graphic graphic;
 
 	public Game(Graphic g) {
